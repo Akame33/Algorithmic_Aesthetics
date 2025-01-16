@@ -2,14 +2,12 @@
 let sliders = [];
 let colors = [];
 let data = [];
-
-
 const numberColors = 4;
 const numberConcepts = 8;
 const conceptNames = ["Sugary", "Bitter", "Mild", "Acid", "Silent", "Noisy", "Harsh", "Harmonious"];
 
 function setup() {
-  createCanvas(650, (700));
+  createCanvas(900, 700);
   colorMode(HSL);
 
   for (let i = 0; i < numberConcepts; i++) {
@@ -17,8 +15,8 @@ function setup() {
 
   }
 
-  createButton("Generate colors").position(150, 700).mousePressed(generateColors);
-  createButton("Export CSV file").position(300, 700).mousePressed(exportCSV);
+  createButton("Generate colors").position(500, 1300).mousePressed(generateColors);
+  createButton("Export CSV file").position(850, 1300).mousePressed(exportCSV);
   generateColors();
 }
 
@@ -26,11 +24,11 @@ function draw() {
   background(240);
 
   // Les bandes de couleurs
-  let stripeWidth = 500 / numberColors;
+  let stripeWidth = 600 / numberColors;
   for (let i = 0; i < colors.length; i++) {
     fill(colors[i]);
     noStroke();
-    rect(i * stripeWidth + 40, 30, stripeWidth, 300);
+    rect(i * stripeWidth + 150, 40, stripeWidth, 300, 5);
   }
 
   // Les sliders et concept
@@ -38,14 +36,14 @@ function draw() {
   fill(30);
   for (let i = 0; i < 4; i++) {
     // Première colonne 
-    text(`${conceptNames[i]}: ${sliders[i].value() / 10}`, 180, 405 + i * 40);
-    sliders[i].position(30, 500 + i * 40);
+    text(`${conceptNames[i]}: ${sliders[i].value() / 10}`, 300, 405 + i * 40);
+    sliders[i].position(490, 1092 + i * 40);
   }
 
   for (let i = 4; i < 8; i++) {
     // Deuxième colonne
-    text(`${conceptNames[i]}: ${sliders[i].value() / 10}`, 480, 405 + (i - 4) * 40);
-    sliders[i].position(330, 500 + (i - 4) * 40);
+    text(`${conceptNames[i]}: ${sliders[i].value() / 10}`, 590, 405 + (i - 4) * 40);
+    sliders[i].position(780, 1092 + (i - 4) * 40);
   }
 }
 
