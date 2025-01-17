@@ -56,8 +56,26 @@ function generateColors() {
     let v = random(30, 100);
     colors.push(color(h, s, v));
   }
-
+  updateBallColors();  // Mettre à jour les couleurs des boules
   saveData();
+}
+// Mettre à jour les couleurs des boules dans le HTML
+function updateBallColors() {
+  // Récupérer les boules depuis le DOM
+  let circle1 = document.querySelector('.circle-1');
+  let circle2 = document.querySelector('.circle-2');
+  let circle3 = document.querySelector('.circle-3');
+
+  // Appliquer les couleurs générées
+  if (circle1) {
+    circle1.style.backgroundColor = colors[0];
+  }
+  if (circle2) {
+    circle2.style.backgroundColor = colors[1];
+  }
+  if (circle3) {
+    circle3.style.backgroundColor = colors[2];
+  }
 }
 
 // Concept et valeurs associées (enregistrement)
