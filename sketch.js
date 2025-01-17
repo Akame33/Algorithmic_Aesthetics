@@ -5,7 +5,6 @@ let data = [];
 const numberColors = 4;
 const numberConcepts = 8;
 const conceptNames = ["Active", "Bright", "Warm", "Wet", "Sugary", "Acid", "Noisy", "Harmonious"];
-// .
 
 function setup() {
   let canvas = createCanvas(windowWidth - 500, windowHeight);
@@ -76,24 +75,6 @@ function generateColors() {
   updateBallColors();  // Mettre à jour les couleurs des boules
   saveData();
 }
-// Mettre à jour les couleurs des boules dans le HTML
-function updateBallColors() {
-  // Récupérer les boules depuis le DOM
-  let circle1 = document.querySelector('.circle-1');
-  let circle2 = document.querySelector('.circle-2');
-  let circle3 = document.querySelector('.circle-3');
-
-  // Appliquer les couleurs générées
-  if (circle1) {
-    circle1.style.backgroundColor = colors[0];
-  }
-  if (circle2) {
-    circle2.style.backgroundColor = colors[1];
-  }
-  if (circle3) {
-    circle3.style.backgroundColor = colors[2];
-  }
-}
 
 // Mettre à jour les couleurs des boules dans le HTML
 function updateBallColors() {
@@ -144,3 +125,4 @@ function exportCSV() {
   a.href = URL.createObjectURL(file);
   a.click();
 }
+// hh
