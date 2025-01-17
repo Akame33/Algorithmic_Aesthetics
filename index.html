@@ -13,8 +13,14 @@
 
 <body>
 
-   <!-- Arrière-plan avec effet de flou -->
-   <div id="background_blur"></div>
+  <!-- Background -->
+  <div class="absolute">
+    <div class="absolute inset-0 justify-center">
+        <div class="bg-shape1 bg-teal opacity-50 bg-blur"></div>
+        <div class="bg-shape1 bg-primary opacity-50 bg-blur"></div>
+        <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
+    </div>
+  </div>
 
    <!-- Contenu principal -->
     <header>
@@ -30,20 +36,15 @@
           </ul>
         </nav>
       </div>
-
     </header>
 
     <main id="corp">
-
       <h1>Algorithmic Aesthetics</h1>
-
       <div class="text_container">
         <p class="presentation"> Our color generator connects concepts to color palettes. <br>
           Users can adjust concept importance through an interactive interface, refining idea-color associations. </p>
       </div>
-
     </main>
-  </div>
 
 
 </body>
