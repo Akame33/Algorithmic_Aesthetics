@@ -7,7 +7,7 @@ const numberConcepts = 8;
 const conceptNames = ["Active", "Bright", "Warm", "Wet", "Sugary", "Acid", "Noisy", "Harmonious"];
 
 function setup() {
-  let canvas = createCanvas(windowWidth - 500, windowHeight);
+  let canvas = createCanvas(windowWidth - 500, windowHeight - 180);
 
   // let canvas = createCanvas(900, 700);
   canvas.parent('corp'); // Place le canvas dans l'élément avec l'id 'corp'
@@ -47,15 +47,15 @@ function draw() {
     let x = i < 4 ? width / 3 : 3 * width / 4;
     let y = startY + (i % 4) * sliderSpacing;
 
-    text(`${conceptNames[i]}: ${sliders[i].value() / 10}`, x - sliderWidth / 2, y - 25);
-    sliders[i].position(x - (sliderWidth - 100) / 2, y + 860);
+    text(`${conceptNames[i]}: ${sliders[i].value() / 10}`, x - sliderWidth / 2 + 100, y - 25);
+    sliders[i].position(x - (sliderWidth) / 2 + 150, y + 860);
     sliders[i].style('width', `${sliderWidth}px`);
   }
 
   // Positionnement des boutons
   let buttonY = height + 700;
-  generateButton.position(width / 3 + 150, buttonY + 100);
-  exportButton.position(width / 3 + 500, buttonY + 100);
+  generateButton.position(width / 3 + 270, buttonY + 100);
+  exportButton.position(width / 3 + 470, buttonY + 100);
 }
 
 
