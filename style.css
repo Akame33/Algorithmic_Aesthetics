@@ -178,7 +178,7 @@ canvas {
   padding: 0;
   margin-bottom: 300px;
   border-radius: 10px;
-  padding-top: 200px;
+  margin-top: 200px;
 }
 
 input[type="range"] {
