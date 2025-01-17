@@ -5,6 +5,7 @@ let data = [];
 const numberColors = 4;
 const numberConcepts = 8;
 const conceptNames = ["Active", "Bright", "Warm", "Wet", "Sugary", "Acid", "Noisy", "Harmonious"];
+// .
 
 function setup() {
   let canvas = createCanvas(windowWidth - 500, windowHeight);
