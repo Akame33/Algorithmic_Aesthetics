@@ -47,6 +47,21 @@ body{
   position: relative;
   animation: two 10s infinite;
 }
+
+.circle-1 {
+  transform: translate(-50%, -50%) translate(-100px, -50px);
+}
+
+.circle-2 {
+  transform: translate(-50%, -50%) translate(50px, 100px);
+  animation: two 10s infinite;
+}
+
+.circle-3 {
+  transform: translate(-50%, -50%) translate(-50px, 150px);
+  animation: three 15s infinite;
+}
+
 @keyframes one {
   0% { transform: translate(-50%, -50%) translate(0px, 0px); }
   25% { transform: translate(-50%, -50%) translate(-100px, 70px); }
@@ -54,16 +69,25 @@ body{
   75% { transform: translate(-50%, -50%) translate(50px, 100px); }
   100% { transform: translate(-50%, -50%) translate(0px, 0px); }
 }
+
 @keyframes two {
-  0%{left: 0px; top: 0px;}
-  25%{left: 50px; top: 10px;}
-  50%{left: 100px; top: 50px;}
-  75%{left: 50px; top: 100px;}
-  100%{left: 0px; top: 0px;}
+  0% { transform: translate(-50%, -50%) translate(0px, 0px); }
+  25% { transform: translate(-50%, -50%) translate(50px, 10px); }
+  50% { transform: translate(-50%, -50%) translate(100px, 50px); }
+  75% { transform: translate(-50%, -50%) translate(50px, 100px); }
+  100% { transform: translate(-50%, -50%) translate(0px, 0px); }
+}
+@keyframes three {
+  0% { transform: translate(-50%, -50%) translate(0px, 0px); }
+  25% { transform: translate(-50%, -50%) translate(-70px, -50px); }
+  50% { transform: translate(-50%, -50%) translate(50px, 120px); }
+  75% { transform: translate(-50%, -50%) translate(-30px, 80px); }
+  100% { transform: translate(-50%, -50%) translate(0px, 0px); }
 }
 
+
 .opacity-50{
-  opacity: .5;
+  opacity: .7;
 }
 .bg-blur{
   filter: blur(90px);
@@ -71,39 +95,55 @@ body{
 
 /*Choix des couleurs*/
 .bg-primary{
-  background-color: rgb(30, 0, 255);
+  background-color: #d9ff00;
 }
 .bg-teal{
-  background-color: rgb(255, 72, 173);
+  background-color: rgb(255, 53, 164);
 }
 .bg-purple{
-  background-color: rgb(140, 0, 215);
+  background-color: rgb(103, 47, 255);
 }
 
 
 /*CONTENU*/
-header{
+header {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-
   display: flex;
-  text-align: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
 }
 
-.header_container{
+.header_container {
   display: flex;
   flex-direction: row;
-  padding: 10px;
   justify-content: space-between;
+  width: 100%;
 }
 
+nav {
+  width: 100%;
+}
 
-
-header ul{
+header ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+header li {
+  padding: 0 20px;
+}
+
+
+header li {
+  padding: 0 10px;
 }
 
 #corp{
@@ -138,6 +178,7 @@ canvas {
   padding: 0;
   margin-bottom: 300px;
   border-radius: 10px;
+  padding-top: 200px;
 }
 
 input[type="range"] {
@@ -179,7 +220,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* S'assure que le contenu occupe au moins toute la hauteur de la fenêtre */
+  min-height: 100vh; 
 }
 
 
